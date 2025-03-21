@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://xhpv2pjxe8lo"]
+
+[ext_resource type="Script" path="res://scripts/LabelLive.gd" id="1_u42di"]
+[ext_resource type="FontFile" uid="uid://g0e4g4332ft0" path="res://assets/Fonts/Raw/CC Wild Words Roman.ttf" id="1_vynbx"]
+
+[node name="LifeCounter" type="MarginContainer"]
+offset_top = 13.0
+offset_right = 1.0
+offset_bottom = 41.0
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_vynbx")
+theme_override_font_sizes/font_size = 32
+script = ExtResource("1_u42di")

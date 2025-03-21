@@ -1,0 +1,45 @@
+[gd_scene load_steps=4 format=3 uid="uid://bs0vj6ljwc5lh"]
+
+[ext_resource type="FontFile" uid="uid://g0e4g4332ft0" path="res://assets/Fonts/Raw/CC Wild Words Roman.ttf" id="1_d4ne7"]
+[ext_resource type="FontFile" uid="uid://cth60gqdxo73p" path="res://assets/Fonts/Raw/continuum bold.ttf" id="2_cibc5"]
+[ext_resource type="Script" path="res://scripts/LinkButton.gd" id="3_qhbnr"]
+
+[node name="GameOver" type="ColorRect"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.613855, 0, 0.0980007, 1)
+
+[node name="HBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -382.0
+offset_top = -72.0
+offset_right = 385.0
+offset_bottom = 72.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_d4ne7")
+theme_override_font_sizes/font_size = 128
+text = "Game Over"
+
+[node name="LinkButton" type="LinkButton" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_hover_color = Color(0.787759, 0.787759, 0.787759, 1)
+theme_override_fonts/font = ExtResource("2_cibc5")
+theme_override_font_sizes/font_size = 28
+text = "Return to Main Menu"
+script = ExtResource("3_qhbnr")
+scene_to_load = "MainMenu"
+
+[connection signal="pressed" from="HBoxContainer/LinkButton" to="HBoxContainer/LinkButton" method="_on_New_Game_pressed"]
